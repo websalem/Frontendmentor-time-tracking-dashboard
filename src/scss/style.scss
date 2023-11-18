@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+*, *::after, *::before{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+$blue: hsl(246, 80%, 60%);
+$halfBlue : hsla(237, 28%, 55%,1);
+$Light-red-work: hsl(15, 100%, 70%);
+$soft-blue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-selfcare: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+body{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    background-color: $Very-dark-blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h2{
+    font-weight: 300;
+}
+img{
+    display: block;
+}
+.dashboard{
+max-width: 1100px;
+margin: auto;
+display: flex;
+justify-content:center ;
+gap: 30px;
+.dashboard-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    div{
+        border-radius: 15px;
+    }
+    .user{
+        background-color: $blue;
+        padding:30px;
+        position: static;
+        z-index: 1;
+        img{
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: 15px;
+            margin-bottom: 45px;
+        }
+        .report{
+            font-size: 14px;
+            color:$Pale-Blue;
+            margin-bottom: 5px;
+        }
+        h2{
+            font-size: 2.6rem;
+            margin-bottom: 60px;
+        }
+    }
+    .time{
+        background-color: $Dark-blue;
+        padding:30px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        transform: translateY(-25px);
+        padding-top:60px ;
+        p{
+            color:$halfBlue;
+            line-height: 2.2;
+            cursor: pointer;
+            &:hover{
+                color:white;
+            }
+           
+        }
+        p.active{
+            color:white;
+        }
+    }
+   
+}
+.dashboard-cards{
+    max-width: 825px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    .hours{
+        flex-basis: 30%;
+        div{
+            border-radius: 15px;
+            padding-top: 50px;
+        }
+        .work{
+            background-color: $Light-red-work;
+            background-image: url(../images/icon-work.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+            
+        }
+        .exercise{
+            background-color: $Lime-green-exercise;
+            background-image: url(../images/icon-exercise.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+        }
+        .play{
+            background-color: $soft-blue-play;
+            background-image: url(../images/icon-play.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+        }
+        .social{
+            background-color: $Violet-social;
+            background-image: url(../images/icon-social.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+        }
+        .study{
+            background-color: $Light-red-study;
+            background-image: url(../images/icon-study.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+        }
+        .selfcare{
+            background-color: $Soft-orange-selfcare;
+            background-image: url(../images/icon-self-care.svg);
+            background-repeat: no-repeat;
+            background-position: top -15px right 15px;
+        }
+       
+        .content{
+            background-color: $Dark-blue;
+            padding:30px;
+            border-radius: 15px;
+            header{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                p{
+                    font-weight: 500;
+                    color:white;
+                }
+            }
+            h2{
+                font-size: 3.4rem;
+                margin-bottom: 10px;
+            }
+            p{
+                color:$Pale-Blue;
+            }
+        }
+    }
+}
+.dashboard-
+section:first-child{
+    gap:0;
+}
+}
+@media  (max-width:475px){
+    .dashboard{
+        max-width: 325px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .dashboard-section{
+            display: flex;
+            flex-direction: column;
+            max-width: 325px;
+            div{
+                border-radius: 15px;
+            }
+            .user{
+                background-color: $blue;
+                padding: 30px;
+                position: static;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                .text{
+                    padding-left: 20px;
+                }
+                img{
+                    border: 5px solid white;
+                    border-radius: 50%;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    display: block;
+                }
+                .report{
+                    font-size: 14px;
+                    color:$Pale-Blue;
+                    margin-bottom: 5px;
+                }
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 0px;
+                }
+            }
+            .time{
+                background-color: $Dark-blue;
+                padding:30px;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                transform: translateY(-25px);
+                padding-top:60px ;
+                display: flex;
+                justify-content: space-around;
+                p{
+                    color:$halfBlue;
+                    line-height: 1;
+                  
+                    cursor: pointer;
+                    &:hover{
+                        color:white;
+                    }
+                }
+            }
+            
+        }
+        .dashboard-cards{
+          
+            flex-direction: column;
+            .hours{
+                div{
+                    border-radius: 15px;
+                    padding-top: 40px;
+                    
+                }
+               
+                .work{
+                    background-color: $Light-red-work;
+                    background-image: url(../images/icon-work.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                    
+                }
+                .exercise{
+                    background-color: $Lime-green-exercise;
+                    background-image: url(../images/icon-exercise.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                }
+                .play{
+                    background-color: $soft-blue-play;
+                    background-image: url(../images/icon-play.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                }
+                .social{
+                    background-color: $Violet-social;
+                    background-image: url(../images/icon-social.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                }
+                .study{
+                    background-color: $Light-red-study;
+                    background-image: url(../images/icon-study.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                }
+                .selfcare{
+                    background-color: $Soft-orange-selfcare;
+                    background-image: url(../images/icon-self-care.svg);
+                    background-repeat: no-repeat;
+                    background-position: top -15px right 15px;
+                }
+               
+                .content{
+                    background-color: $Dark-blue;
+                    padding:30px;
+                    border-radius: 15px;
+
+                    header{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            color:white;
+                            font-size: 16px;
+                        }
+                    }
+                    main{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    h2{
+                        font-size: 2rem;
+                        margin-bottom: 0;
+                    }
+                    p{
+                        color:$Pale-Blue;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+}}
